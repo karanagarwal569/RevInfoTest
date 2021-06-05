@@ -11,6 +11,7 @@ public class FBLogin {
 	By email=By.id("email");
 	By password=By.id("pass");
 	By loginbtn=By.name("login");
+	By txtusername=By.xpath("/html/body/div[1]/div/div[1]/div/div[2]/div[4]/div[1]/div[4]/a/span/span");
 	
 	public void setEmail(String Email)
 	{
@@ -25,6 +26,12 @@ public class FBLogin {
 	public void clickLoginBtn()
 	{
 		driver.findElement(loginbtn).click();
+	}
+	
+	public String getUserName()
+	{
+		return driver.findElement(txtusername).getText();
+		
 	}
 
 }

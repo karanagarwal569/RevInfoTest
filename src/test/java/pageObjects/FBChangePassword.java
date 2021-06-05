@@ -1,7 +1,6 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class FBChangePassword {
@@ -15,11 +14,13 @@ public class FBChangePassword {
 	By btnsettingandprivacy=By.xpath("//span[contains(text(),'Settings & privacy')]");
 	By btnprivacyshortcut=By.xpath("//span[contains(text(),'Privacy shortcuts')]");
 	By btnleave=By.xpath("//span[contains(text(),'Leave')]");
-	By btnchangepassword=By.xpath("//*[@class='_-3f']");
+	By btnchangepassword=By.xpath("//div[contains(text(),'Change your password')]");
 	By currentpwd=By.id("password_old");
 	By newpassword=By.id("password_new");
 	By renewpassword=By.id("password_confirm");
 	By btnsavechanges=By.xpath("//input[@value='Save Changes']");
+	By btnStayLogin=By.xpath("//*[@class='_55sh uiInputLabelInput']");
+	By btnContinue=By.xpath("//*[contains(text(),'Continue')]");
 	
 	public void clickAccount()
 	{
@@ -43,13 +44,14 @@ public class FBChangePassword {
 	
 	public void clickChangePassword()
 	{
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scroll(0, 200)");
-		driver.findElements(btnchangepassword).get(4).click();
+		driver.switchTo().frame(0);
+		driver.findElement(btnchangepassword).click();
+		driver.switchTo().parentFrame();
 	}
 	
 	public void setCurrentPasword(String CurrentPassword)
 	{
+		driver.switchTo().frame(0);
 		driver.findElement(currentpwd).sendKeys(CurrentPassword);
 	}
 	
@@ -68,4 +70,15 @@ public class FBChangePassword {
 		driver.findElement(btnsavechanges).click();
 	}
 
+	public void clickStayLogin()
+	{
+		driver.findElements(btnStayLogin).get(5).click();
+	}
+	
+	public void clickContinue()
+	{
+		driver.findElement(btnContinue).click();
+		driver.switchTo().parentFrame();
+	}
+	
 }

@@ -5,7 +5,9 @@
     <classes>
       <class name="FacebookAssignment.FBFunctionalities">
         <methods>
+          <include name="postStatus"/>
           <include name="initialize"/>
+          <include name="loginIntoFB" invocation-numbers="0"/>
           <include name="changePassword"/>
           <include name="teardown"/>
         </methods>
