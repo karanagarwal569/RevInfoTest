@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 44.133 s <<< FAILURE! - in TestSuite
+FacebookAssignment.FBFunctionalities.changePassword  Time elapsed: 31.303 s  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index: 4, Size: 0
+	at FacebookAssignment.FBFunctionalities.changePassword(FBFunctionalities.java:88)
+

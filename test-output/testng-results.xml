@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-05T16:35:01 IST" name="Suite" finished-at="2021-06-05T16:35:42 IST" duration-ms="41150">
+    <groups>
+    </groups>
+    <test started-at="2021-06-05T16:35:01 IST" name="Test" finished-at="2021-06-05T16:35:42 IST" duration-ms="41150">
+      <class name="FacebookAssignment.FBFunctionalities">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FacebookAssignment.FBFunctionalities@194bcebf]" started-at="2021-06-05T16:35:01 IST" name="initialize" finished-at="2021-06-05T16:35:10 IST" duration-ms="9362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginIntoFB(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:FacebookAssignment.FBFunctionalities@194bcebf]" started-at="2021-06-05T16:35:12 IST" name="loginIntoFB" data-provider="getLoginData" finished-at="2021-06-05T16:35:12 IST" duration-ms="616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[karanagarwal569@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[a5s6ihxta]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[KaRan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginIntoFB -->
+        <test-method signature="postStatus()[pri:2, instance:FacebookAssignment.FBFunctionalities@194bcebf]" started-at="2021-06-05T16:35:12 IST" name="postStatus" finished-at="2021-06-05T16:35:12 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postStatus -->
+        <test-method signature="changePassword()[pri:3, instance:FacebookAssignment.FBFunctionalities@194bcebf]" started-at="2021-06-05T16:35:12 IST" name="changePassword" finished-at="2021-06-05T16:35:42 IST" duration-ms="29529" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 4 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at pageObjects.FBChangePassword.clickChangePassword(FBChangePassword.java:48)
+at FacebookAssignment.FBFunctionalities.changePassword(FBFunctionalities.java:88)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FacebookAssignment.FBFunctionalities@194bcebf]" started-at="2021-06-05T16:35:42 IST" name="teardown" finished-at="2021-06-05T16:35:42 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- FacebookAssignment.FBFunctionalities -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
