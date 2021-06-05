@@ -66,7 +66,7 @@ public class FBFunctionalities extends base {
 		
 	}
 	
-	@Test(priority=2)
+	@Test(priority=3)
 	public void postStatus()
 	{
 		FBPostStatus fbp=new FBPostStatus(driver);
@@ -77,7 +77,7 @@ public class FBFunctionalities extends base {
 		
 	}
 	
-	@Test(priority=3)
+	@Test(priority=2)
 	public void changePassword() throws InterruptedException
 	{
 		FBChangePassword fbc=new FBChangePassword(driver);

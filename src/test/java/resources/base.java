@@ -46,11 +46,15 @@ public class base {
 		}
 		else if(browserName.equals("firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\Lenovo\\Downloads\\chromedriver_win32\\chromedriver.exe" );
+			String firefoxpath= System.getProperty("user.dir")+"\\src\\test\\java\\resources\\gecko.exe";
+			
+			System.setProperty("webdriver.gecko.driver",firefoxpath );
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("IE")) {
-			System.setProperty("webdriver.ie.driver","C:\\Users\\Lenovo\\Downloads\\chromedriver_win32\\chromedriver.exe" );
+			String iepath= System.getProperty("user.dir")+"\\src\\test\\java\\resources\\ie.exe";
+			
+			System.setProperty("webdriver.ie.driver",iepath);
 			driver=new ChromeDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
